@@ -6,7 +6,7 @@ const Car = require('../models/Car')
 
 router.get("/getCars", async (req, res) => {
     try {
-        const cars = await Car.find().select("-_id");
+        const cars = await Car.find().select("-__v");
         res.send(cars);
     }
     catch (e) {
