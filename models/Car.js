@@ -27,14 +27,14 @@ const carSchema = new Schema({
     }]
 })
 
-carSchema.method('transform', function() {
-    var obj = this.toObject();
+// Duplicate the ID field.
+carSchema.virtual('id').get(function(){
+    return this._id.toHexString();
+});
 
-    //Rename fields
-    obj.id = obj._id;
-    delete obj._id;
-
-    return obj;
+// Ensure virtual fields are serialised.
+carSchema.set('toJSON', {
+    virtuals: true
 });
 
 module.exports = model('Car', carSchema)
