@@ -156,7 +156,7 @@ router.get("/:id", async (req, res) => {
 
 router.delete('/deleteCar/:id', async (req, res) => {
     try {
-        await Car.findByIdAndRemove({ id: req.params.id })
+        await Car.findByIdAndRemove({ _id: req.params.id })
         res.status(200).json({ message: "Автомобиль удален!" })
     } catch (e) {
         res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова' })
