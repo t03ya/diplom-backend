@@ -4,7 +4,7 @@ const Car = require('../models/Car')
 
 // Получение списка классов и класса 
 
-router.get("/getCars", async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const cars = await Car.find().select("-__v");
         res.send(cars);
@@ -23,15 +23,15 @@ router.post("/addCar", async (req, res) => {
         res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова' })
     }
 });
-// router.get("/classrooms/:id", async (req, res) => {
-//     try {
-//         const classroom = await Classroom.findById(req.params.id).select("-__v")
-//         res.send(classroom);
-//     }
-//     catch (e) {
-//         res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова' })
-//     }
-// });
+router.get("/:id", async (req, res) => {
+    try {
+        const car = await Car.findById(req.params.id).select("-__v")
+        res.send(car);
+    }
+    catch (e) {
+        res.status(500).json({ message: 'Что-то пошло не так, попробуйте снова' })
+    }
+});
 
 // // Добавление и удаление учителя и студента
 
