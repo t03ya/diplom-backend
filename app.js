@@ -15,7 +15,7 @@ app.use(express.json({ extended: true }))
 
 // app.use('/api/auth', require('./routes/auth.routes'))
 // app.use('/api/users', require('./routes/users.routes'))
-// app.use('/api/cars', require('./routes/cars.routes'))
+app.use('/api/cars', require('./routes/cars.routes'))
 // app.use('/api/waybills', require('./routes/waybills.routes'))
 // app.use('/api/drivers', require('./routes/drivers.routes'))
 
