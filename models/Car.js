@@ -27,4 +27,14 @@ const carSchema = new Schema({
     }]
 })
 
+carSchema.method('transform', function() {
+    var obj = this.toObject();
+
+    //Rename fields
+    obj.id = obj._id;
+    delete obj._id;
+
+    return obj;
+});
+
 module.exports = model('Car', carSchema)

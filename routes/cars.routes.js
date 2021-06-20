@@ -7,10 +7,6 @@ const Car = require('../models/Car')
 router.get("/getCars", async (req, res) => {
     try {
         const cars = await Car.find().select("-__v");
-        
-        cars.id = cars._id;
-        delete cars._id;
-
         res.send(cars);
     }
     catch (e) {
