@@ -1,0 +1,4 @@
+{
+    "MONGODB_URI": "mongodb+srv://golovan:<password>@school-platform.57xhq.azure.mongodb.net/app?retryWrites=true&w=majority",
+    "jwtSecret": "golovan8672"
+}

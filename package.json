@@ -1,0 +1,38 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "connect": "^3.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.12.14",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tozzvlad/diplom-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tozzvlad/diplom-backend/issues"
+  },
+  "homepage": "https://github.com/tozzvlad/diplom-backend#readme"
+}
