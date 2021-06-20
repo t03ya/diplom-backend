@@ -21,7 +21,7 @@ const carSchema = new Schema({
     price:  {type: String, required: true},
     drivers: [{ 
          _id: false,
-         tabelNumber: { type: String },
+         driverId: { type: String },
          fio: {type: String},
          licenseNumber: {type: String} 
     }]
