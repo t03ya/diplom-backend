@@ -27,4 +27,4 @@ const carSchema = new Schema({
     }]
 })
 
-module.exports = model('Classroom', classroomSchema)
+module.exports = model('Car', carSchema)
