@@ -4,7 +4,7 @@ const Car = require('../models/Car')
 
 // Получение списка классов и класса 
 
-router.get("/cars", async (req, res) => {
+router.get("/getCars", async (req, res) => {
     try {
         const cars = await Car.find().select("-__v");
         res.send(cars);
